@@ -32,6 +32,49 @@ header{
     background-color: brown;
 }
 
+input{
+    width: 100%;
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    border-width: 1px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    background-color: transparent;
+    color: #EEE;
+    backdrop-filter: blur(10px) saturate(165%);
+    -webkit-backdrop-filter: blur(19px) saturate(165%);
+    background-color: rgba(17, 25, 40, 0.18);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125); 
+}
+
+input::placeholder{
+    color:rgba(255, 255, 255, 0.4)
+}
+
+textarea{
+    width: 100%;
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    border-width: 1px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    background-color: transparent;
+    color: #EEE;
+    backdrop-filter: blur(10px) saturate(165%);
+    -webkit-backdrop-filter: blur(19px) saturate(165%);
+    background-color: rgba(17, 25, 40, 0.18);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125); 
+}
 .logo{
     width: 200px;
     height: 200px;
@@ -62,7 +105,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     
 }
 .navbar--col{
@@ -70,13 +113,12 @@ header{
     -webkit-backdrop-filter: blur(19px) saturate(165%);
     background-color: rgba(17, 25, 40, 0.18);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    
+    border: 1px solid rgba(255, 255, 255, 0.125); 
 }
 
 .navbar ul li{
     list-style-type: none;
-    margin: 40% 0%;
+    margin: 10% 0%;
     padding: 20px;
     border-radius: 30px 30px 30px 30px ;
 }
@@ -110,6 +152,8 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #DDD;
+
 }
 
 .content__card--long{
@@ -123,8 +167,35 @@ header{
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
 }
 
+.card__title--long{
+    font-size: 2em;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(144deg, rgba(64,116,158,0.88) 37%, rgba(54,45,115,0.89) 63%, rgba(11,5,48,0.89) 82%);
+    border-width: 5px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+.card__description{
+    margin: 10px 0px;
+}
+.card__left{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+
+}
+.card__left img{
+    width: 100%;
+    height:auto;
+}
 .content__card--long:nth-child(even){
     margin: 10px auto 10px 50px;
 }
@@ -150,6 +221,12 @@ header{
     background-color: rgba(17, 25, 40, 0.18);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
+    transition: .2s;
+}
+
+.content__card--short:hover{
+    transform: scale(1.1);
+    box-shadow: #bfbfc0 2px 1px 14px 0px;
 }
 
 .card__image{
@@ -215,4 +292,58 @@ header{
     transition: width 0.4s ease-out;
     overflow: hidden;
     position: absolute;
+}
+
+.contact__content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.contact__form{
+    width: 50%;
+    backdrop-filter: blur(19px) saturate(165%);
+    -webkit-backdrop-filter: blur(19px) saturate(165%);
+    background-color: rgba(111, 204, 201, 0.327);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px
+}
+
+.contact__message{
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .main__container{
+        display: block;
+        overflow: auto;
+    }
+    .navbar{
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar--col{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .navbar ul li{
+        margin:0px 5px;
+    }
+
+    .content--grid{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content--grid{
+        grid-template-columns: auto;
+    }
 }

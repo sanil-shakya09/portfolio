@@ -12,10 +12,10 @@
 
 .navbar--row{
     margin: auto;
-    width: 50%;
+    width: 40%;
     position: absolute;
-    bottom: 150px;
-    left: 200px;
+    bottom: 100px;
+    left: 20%;
     backdrop-filter: blur(10px) saturate(165%);
     -webkit-backdrop-filter: blur(19px) saturate(165%);
     background-color: rgba(17, 25, 40, 0.18);
@@ -84,4 +84,28 @@
 
 .content__body{
     margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar--row{
+        /* margin: 0 auto; */
+        right: 0;
+        bottom: auto;
+        left: auto;
+        top: 0;
+    }
+    .content{
+        display: block;
+    }
+    .content__left{
+        position: absolute;
+        bottom: 50px;
+        right: auto;
+        top:auto;
+        left: 50px;
+    }
+    .content__right{
+        width: 100%;
+        overflow: hidden
+    }
 }
